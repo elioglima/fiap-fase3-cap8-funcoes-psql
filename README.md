@@ -248,3 +248,13 @@ COMMIT;
            FUN_CALCULAIDADE(PF.DATA_NASCIMENTO) AS IDADE
     FROM
            PESSOAFISICA PF;
+
+    SELECT
+              FUN_CALCULAIDADE(TO_DATE('1979-11-04', 'YYYY-MM-DD')) AS IDADE,
+              MASCARA('12345123', '#####-###') AS cep,
+              MASCARA('121231231', '##.###.###-#') AS rg,
+              MASCARA('1212312312', '##.###.###-##') AS cpf,
+              MASCARA('12123123123412', '##.###.###/####-##') AS cnpj,
+              MASCARA('1212341234', '(##) ####-####') AS telefone,
+              MASCARA('12123451234', '(##) #####-####') AS celular
+       FROM dual;
